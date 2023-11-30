@@ -1,0 +1,179 @@
+#!/bin/bash
+#SBATCH --partition=CSUG ### Partition
+#SBATCH --nodes=1 ### Number of Nodes
+#SBATCH --time=0:20:00 ### WallTime
+#SBATCH --ntasks=1 ### Number of tasks
+#SBATCH --ntasks-per-node=1 ### Number of tasks (MPI processes)
+#SBATCH --cpus-per-task=40 ### Number of threads per task (OMP threads)
+#SBATCH --job-name=count3 ### Job name
+#SBATCH --output=output.txt ### Output file
+module use /share/apps/eb/modules/all
+module load EasyBuild
+gcc -pthread -Werror -Wall -O0 n_body_pThreads_static.c -lm
+./a.out 10000 200 1 >>output.txt
+./a.out 10000 200 2 >>output.txt
+./a.out 10000 200 3 >>output.txt
+./a.out 10000 200 4 >>output.txt
+./a.out 10000 200 5 >>output.txt
+./a.out 10000 200 6 >>output.txt
+./a.out 10000 200 7 >>output.txt
+./a.out 10000 200 8 >>output.txt
+./a.out 10000 200 9 >>output.txt
+./a.out 10000 200 10 >>output.txt
+./a.out 10000 200 11 >>output.txt
+./a.out 10000 200 12 >>output.txt
+./a.out 10000 200 13 >>output.txt
+./a.out 10000 200 14 >>output.txt
+./a.out 10000 200 15 >>output.txt
+./a.out 10000 200 16 >>output.txt
+./a.out 10000 200 17 >>output.txt
+./a.out 10000 200 18 >>output.txt
+./a.out 10000 200 19 >>output.txt
+./a.out 10000 200 20 >>output.txt
+./a.out 10000 200 21 >>output.txt
+./a.out 10000 200 22 >>output.txt
+./a.out 10000 200 23 >>output.txt
+./a.out 10000 200 24 >>output.txt
+./a.out 10000 200 25 >>output.txt
+./a.out 10000 200 26 >>output.txt
+./a.out 10000 200 27 >>output.txt
+./a.out 10000 200 28 >>output.txt
+./a.out 10000 200 29 >>output.txt
+./a.out 10000 200 30 >>output.txt
+./a.out 10000 200 31 >>output.txt
+./a.out 10000 200 32 >>output.txt
+./a.out 10000 200 33 >>output.txt
+./a.out 10000 200 34 >>output.txt
+./a.out 10000 200 35 >>output.txt
+./a.out 10000 200 36 >>output.txt
+./a.out 10000 200 37 >>output.txt
+./a.out 10000 200 38 >>output.txt
+./a.out 10000 200 39 >>output.txt
+./a.out 10000 200 40 >>output.txt
+
+gcc -pthread -Werror -Wall -O3 n_body_pThreads_static.c -lm
+./a.out 10000 200 1 >>outputs3.txt
+./a.out 10000 200 2 >>outputs3.txt
+./a.out 10000 200 3 >>outputs3.txt
+./a.out 10000 200 4 >>outputs3.txt
+./a.out 10000 200 5 >>outputs3.txt
+./a.out 10000 200 6 >>outputs3.txt
+./a.out 10000 200 7 >>outputs3.txt
+./a.out 10000 200 8 >>outputs3.txt
+./a.out 10000 200 9 >>outputs3.txt
+./a.out 10000 200 10 >>outputs3.txt
+./a.out 10000 200 11 >>outputs3.txt
+./a.out 10000 200 12 >>outputs3.txt
+./a.out 10000 200 13 >>outputs3.txt
+./a.out 10000 200 14 >>outputs3.txt
+./a.out 10000 200 15 >>outputs3.txt
+./a.out 10000 200 16 >>outputs3.txt
+./a.out 10000 200 17 >>outputs3.txt
+./a.out 10000 200 18 >>outputs3.txt
+./a.out 10000 200 19 >>outputs3.txt
+./a.out 10000 200 20 >>outputs3.txt
+./a.out 10000 200 21 >>outputs3.txt
+./a.out 10000 200 22 >>outputs3.txt
+./a.out 10000 200 23 >>outputs3.txt
+./a.out 10000 200 24 >>outputs3.txt
+./a.out 10000 200 25 >>outputs3.txt
+./a.out 10000 200 26 >>outputs3.txt
+./a.out 10000 200 27 >>outputs3.txt
+./a.out 10000 200 28 >>outputs3.txt
+./a.out 10000 200 29 >>outputs3.txt
+./a.out 10000 200 30 >>outputs3.txt
+./a.out 10000 200 31 >>outputs3.txt
+./a.out 10000 200 32 >>outputs3.txt
+./a.out 10000 200 33 >>outputs3.txt
+./a.out 10000 200 34 >>outputs3.txt
+./a.out 10000 200 35 >>outputs3.txt
+./a.out 10000 200 36 >>outputs3.txt
+./a.out 10000 200 37 >>outputs3.txt
+./a.out 10000 200 38 >>outputs3.txt
+./a.out 10000 200 39 >>outputs3.txt
+./a.out 10000 200 40 >>outputs3.txt
+
+gcc -pthread -Werror -Wall -O0 n_body_pThread_dynamic.c -lm
+./a.out 10000 200 1 >>outputd.txt
+./a.out 10000 200 2 >>outputd.txt
+./a.out 10000 200 3 >>outputd.txt
+./a.out 10000 200 4 >>outputd.txt
+./a.out 10000 200 5 >>outputd.txt
+./a.out 10000 200 6 >>outputd.txt
+./a.out 10000 200 7 >>outputd.txt
+./a.out 10000 200 8 >>outputd.txt
+./a.out 10000 200 9 >>outputd.txt
+./a.out 10000 200 10 >>outputd.txt
+./a.out 10000 200 11 >>outputd.txt
+./a.out 10000 200 12 >>outputd.txt
+./a.out 10000 200 13 >>outputd.txt
+./a.out 10000 200 14 >>outputd.txt
+./a.out 10000 200 15 >>outputd.txt
+./a.out 10000 200 16 >>outputd.txt
+./a.out 10000 200 17 >>outputd.txt
+./a.out 10000 200 18 >>outputd.txt
+./a.out 10000 200 19 >>outputd.txt
+./a.out 10000 200 20 >>outputd.txt
+./a.out 10000 200 21 >>outputd.txt
+./a.out 10000 200 22 >>outputd.txt
+./a.out 10000 200 23 >>outputd.txt
+./a.out 10000 200 24 >>outputd.txt
+./a.out 10000 200 25 >>outputd.txt
+./a.out 10000 200 26 >>outputd.txt
+./a.out 10000 200 27 >>outputd.txt
+./a.out 10000 200 28 >>outputd.txt
+./a.out 10000 200 29 >>outputd.txt
+./a.out 10000 200 30 >>outputd.txt
+./a.out 10000 200 31 >>outputd.txt
+./a.out 10000 200 32 >>outputd.txt
+./a.out 10000 200 33 >>outputd.txt
+./a.out 10000 200 34 >>outputd.txt
+./a.out 10000 200 35 >>outputd.txt
+./a.out 10000 200 36 >>outputd.txt
+./a.out 10000 200 37 >>outputd.txt
+./a.out 10000 200 38 >>outputd.txt
+./a.out 10000 200 39 >>outputd.txt
+./a.out 10000 200 40 >>outputd.txt
+
+gcc -pthread -Werror -Wall -O3 n_body_pThread_dynamic.c -lm
+./a.out 10000 200 1 >>outputd3.txt
+./a.out 10000 200 2 >>outputd3.txt
+./a.out 10000 200 3 >>outputd3.txt
+./a.out 10000 200 4 >>outputd3.txt
+./a.out 10000 200 5 >>outputd3.txt
+./a.out 10000 200 6 >>outputd3.txt
+./a.out 10000 200 7 >>outputd3.txt
+./a.out 10000 200 8 >>outputd3.txt
+./a.out 10000 200 9 >>outputd3.txt
+./a.out 10000 200 10 >>outputd3.txt
+./a.out 10000 200 11 >>outputd3.txt
+./a.out 10000 200 12 >>outputd3.txt
+./a.out 10000 200 13 >>outputd3.txt
+./a.out 10000 200 14 >>outputd3.txt
+./a.out 10000 200 15 >>outputd3.txt
+./a.out 10000 200 16 >>outputd3.txt
+./a.out 10000 200 17 >>outputd3.txt
+./a.out 10000 200 18 >>outputd3.txt
+./a.out 10000 200 19 >>outputd3.txt
+./a.out 10000 200 20 >>outputd3.txt
+./a.out 10000 200 21 >>outputd3.txt
+./a.out 10000 200 22 >>outputd3.txt
+./a.out 10000 200 23 >>outputd3.txt
+./a.out 10000 200 24 >>outputd3.txt
+./a.out 10000 200 25 >>outputd3.txt
+./a.out 10000 200 26 >>outputd3.txt
+./a.out 10000 200 27 >>outputd3.txt
+./a.out 10000 200 28 >>outputd3.txt
+./a.out 10000 200 29 >>outputd3.txt
+./a.out 10000 200 30 >>outputd3.txt
+./a.out 10000 200 31 >>outputd3.txt
+./a.out 10000 200 32 >>outputd3.txt
+./a.out 10000 200 33 >>outputd3.txt
+./a.out 10000 200 34 >>outputd3.txt
+./a.out 10000 200 35 >>outputd3.txt
+./a.out 10000 200 36 >>outputd3.txt
+./a.out 10000 200 37 >>outputd3.txt
+./a.out 10000 200 38 >>outputd3.txt
+./a.out 10000 200 39 >>outputd3.txt
+./a.out 10000 200 40 >>outputd3.txt
+
